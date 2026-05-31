@@ -7,18 +7,18 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "pessoas")
-public class Pessoa {
+@Table(name = "cursos")
+public class Curso {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nome;
-    private int idade;
-    private String email;
+    private int cargaHoraria;
+    private boolean ativo;
 
-    public Pessoa() {
+    public Curso() {
     }
 
     public Long getId() {
@@ -37,19 +37,21 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public int getIdade() {
-        return idade;
+    public int getCargaHoraria() {
+        return cargaHoraria;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setCargaHoraria(int cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
     }
 
-    public String getEmail() {
-        return email;
+    public boolean isAtivo() {
+        return ativo;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
     }
 }
+
+
